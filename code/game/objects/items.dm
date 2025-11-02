@@ -545,7 +545,10 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 			var/percent = round(((obj_integrity / max_integrity) * 100), 1)
 			inspec += "[percent]% ([obj_integrity])"
 
-		to_chat(usr, examine_block("[inspec.Join()]"))
+		var/output = inspec.Join()
+		if(!usr.client.prefs.no_examine_blocks)
+			output = examine_block(output)
+		to_chat(usr, output)
 
 /obj/item
 	var/simpleton_price = FALSE
