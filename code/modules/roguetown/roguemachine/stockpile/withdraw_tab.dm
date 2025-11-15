@@ -82,9 +82,7 @@
 			if (user && HAS_TRAIT(user, TRAIT_FOOD_STIPEND))
 				if (SStreasury.treasury_value >= total_price)
 					D.held_items[source_stockpile]--
-					SStreasury.economic_output -= D.export_price
-					SStreasury.treasury_value -= D.withdraw_price
-					SStreasury.log_to_steward("-[D.withdraw_price] direct from treasury (vomitorium, stipend)")
+					SStreasury.log_to_steward("-[D.withdraw_price]m worth of goods withdrawn direct from vomitorium (keep stipend)")
 					var/obj/item/I = new D.item_type(parent_structure.loc)
 					to_chat(user, span_info("[parent_structure] chitters and squeaks into the treasury ratlines."))
 					if(!user.put_in_hands(I))
