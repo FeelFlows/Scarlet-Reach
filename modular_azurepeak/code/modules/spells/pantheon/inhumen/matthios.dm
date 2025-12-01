@@ -274,9 +274,9 @@
 			if (501 to INFINITY)
 				thing_to_say = "YOUR FINAL TRANSACTION! THE FREE-GOD REBUKES!!"
 				stun_to_apply = 60
-				fire_stacks = 12
+				fire_stacks = 10
 				fire_dmg = 150
-				oxy_dmg = 100
+				oxy_dmg = 50
 				explosion(get_turf(target), light_impact_range = 1, flame_range = 1, smoke = FALSE)
 
 		if (thing_to_say)
