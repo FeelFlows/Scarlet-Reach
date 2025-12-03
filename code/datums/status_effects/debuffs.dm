@@ -144,7 +144,7 @@
 /atom/movable/screen/alert/status_effect/asleep
 	name = "Asleep"
 	desc = ""
-	icon_state = "asleep"
+	icon_state = "sleeping"
 
 //STASIS
 /datum/status_effect/incapacitating/stasis
@@ -567,7 +567,7 @@ obj/effect/temp_visual/curse/Initialize()
 /datum/status_effect/debuff/feintcd
 	id = "feintcd"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/feintcd
-	duration = 15 SECONDS
+	duration = 30 SECONDS
 
 /datum/status_effect/debuff/feintcd/on_creation(mob/living/new_owner, new_dur)
 	if(new_dur)
